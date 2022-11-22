@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GráficaFea3</title>
+</head>
+<body><h1>Gráfica de disco</h1>
+    <p>Torres Renteria Rafael Iram</p>
+    <p>225719</p>
+    <p>Tecnologías de la Información</p>
+    <img src="https://www.sopitas.com/wp-content/uploads/2022/01/steve-goldman-coleccion-peores-portadas-discos-raras-historia-viral-4.jpeg">
+    <canvas id="grafica" width="400" height="300"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>   
+</body>
+<script src="JSON.js"></script>
+</html>
+
+</head>
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels:  ['Creatividad', 'Cantidad de Colores', 'Nombre del Álbum', 'Ventas'],
+                datasets: [{
+                    label: 'Peter Rabbit - Rock n Roll',
+                    data: [0, 4, 10, 5, 10,],
+                    backgroundColor: [
+                        'rgba(223, 3, 3, 0.2)',
+                        'rgba(0, 0, 0, 0.2)',
+                        'rgba(100, 100, 100, 0.2)',
+                        'rgba(100, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(0, 0, 0, 1)',
+                        'rgba(174, 174, 174, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+
+</body>
